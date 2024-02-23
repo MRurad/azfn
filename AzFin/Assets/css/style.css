@@ -1,0 +1,1081 @@
+/* ===================================================================================== BASICS ============================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.lang p {
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.lang p:hover {
+  background-color: #fbc400;
+  color: #1d1f2c;
+  padding: 5px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.lang {
+  position: relative;
+}
+
+.langdiv {
+  /* width: 160px; */
+  padding: 20px;
+  border: #fbc400 1px solid;
+  background-color: #1d1f2c;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 45px;
+  left: -65px;
+}
+
+.langdiv a {
+  font-size: 12px;
+  text-align: center;
+  width: 120px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.langdiv a:hover {
+  background-color: #fbc400;
+  color: #1d1f2c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fbc400;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+iframe {
+  width: 500px;
+  height: 300px;
+  border: 0px solid #fbc400;
+  border-radius: 10px;
+  filter: invert(90%) hue-rotate(180deg);
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.modal {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  background-color: #fff;
+  padding: 20px;
+  width: 50%;
+  border-radius: 10px;
+  z-index: 3;
+  border: #fbc400 3px solid;
+}
+
+.modal span {
+  font-size: 30px;
+  position: absolute;
+  right: 5px;
+  top: 0px;
+  cursor: pointer;
+}
+
+/* ===================================================================================== HEADER ============================================================== */
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  background-color: #1d1f2c;
+  color: #fbc400;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  border-bottom: 2px solid black;
+}
+
+.hamburger {
+  display: none;
+  font-size: 25px;
+  z-index: 3;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background: #fbc400;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  transition: all 0.7s ease;
+  width: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.container .logo {
+  z-index: 2;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.logo a {
+  font-family: sans-serif;
+  letter-spacing: 0.7px;
+  font-size: 25px;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 25px;
+}
+
+.header-menu-props {
+  padding: 10px;
+  border-radius: 10px;
+  transition: 300ms all ease;
+}
+
+.header-menu-props:last-child i {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+.header-menu-props:hover,
+.header-menu-props:active {
+  background-color: #fbc400;
+  color: #1d1f2c;
+}
+
+.js_language_selector {
+  background-color: #fbc400;
+  color: #1d1f2c;
+  padding: 5px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+/* ===================================================================================== HERO ============================================================== */
+
+.hero-img {
+  width: 100%;
+  height: calc(100vh + 1px);
+}
+
+.hero-bg {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: calc(100% + 1px);
+  position: absolute;
+  top: 0px;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translateY(-50%);
+  color: #fbc400;
+  padding: 10px 20px 40px;
+  border-radius: 10px;
+  width: 40%;
+}
+
+.hero-text p {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+/* ===================================================================================== EXPERTISE ============================================================== */
+
+.cargo-expertise {
+  padding: 70px;
+  background-color: #1d1f2c;
+  color: #fbc400;
+}
+.cargo-expertise h2 {
+  text-align: center;
+  margin-bottom: 60px;
+  word-spacing: 10px;
+  font-size: 30px;
+}
+.cargo-expertise-boxs {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.cargo-expertise-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+  width: 15%;
+  height: 150px;
+  border-radius: 15px;
+  transition: all 300ms linear;
+}
+.cargo-expertise-box i {
+  color: #fbc400;
+  font-size: 22px;
+}
+
+.cargo-expertise-box p {
+  text-align: center;
+  height: 20px;
+}
+
+.cargo-expertise-box span {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  background-color: #1d1f2c;
+  padding: 10px;
+  border: 5px solid #888;
+  box-shadow: 0px 0px 0px 3px #fbc400;
+
+  transition: all 300ms linear;
+}
+
+/* .cargo-expertise-box:hover {
+  background-color: #fbc400;
+  color: #1d1f2c;
+  cursor: pointer;
+}
+.cargo-expertise-box:hover span {
+  box-shadow: 0px 0px 0px 3px #1d1f2c;
+} */
+
+/* ===================================================================================== ABOUT US ============================================================== */
+
+.animate {
+  animation: drive 4s linear;
+}
+
+.animate-rotate {
+  animation: rotate 4s linear;
+}
+
+.why-choose {
+  padding: 40px 80px;
+  background-color: #fbc400;
+}
+
+.why-choose-head-flex {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.truck-back {
+  background-color: #1d1f2c;
+  height: 37px;
+  width: 230px;
+  transform: translatex(6px);
+  position: relative;
+  /* margin-bottom: 20px; */
+}
+
+.why-choose-title {
+  color: #fbc400;
+  position: absolute;
+  top: 0px;
+  left: 25%;
+}
+
+.back-wheels {
+  display: flex;
+  gap: 1px;
+}
+
+.wheel {
+  height: 16px;
+  width: 16px;
+  background-color: #fbc400;
+  border-radius: 50%;
+  border: 4px solid #1d1f2c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.wheel-div {
+  transform: translate(5px, 29px);
+}
+
+.wheel-front-middle {
+  transform: translate(173px, 29px);
+}
+.wheel-front {
+  transform: translate(162px, 29px);
+}
+
+.wheel-front-back {
+  transform: translate(162px, 29px);
+}
+
+.wheel span {
+  display: block;
+  width: 2px;
+  height: 3px;
+  background-color: #1d1f2c;
+  border-radius: 1px;
+}
+
+.wheel-circle {
+  width: 4.6px;
+  height: 4.6px;
+  background-color: #fbc400;
+  border: #1d1f2c 1px solid;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wheel span:nth-child(1) {
+  transform: rotate(90deg);
+  /* transform: translatex(-1px); */
+}
+.wheel span:nth-child(2) {
+  transform: translate(1px, 3px);
+  /* background-color: red; */
+}
+.wheel span:nth-child(3) {
+  transform: translate(-1px, -3px);
+}
+.wheel span:nth-child(4) {
+  transform: rotate(90deg);
+}
+
+@keyframes drive {
+  0% {
+    transform: translatex(-50%);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(2160deg);
+  }
+}
+
+.fa-truck {
+  font-size: 45px;
+  color: #1d1f2c;
+}
+
+.why-choose-boxs {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.why-choose-box {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  padding: 20px 25px;
+  border-radius: 15px;
+  background-color: #1d1f2c;
+  color: #fbc400;
+  width: 30%;
+  margin: 30px 0px;
+}
+
+.why-title {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.why-text {
+  text-align: left;
+  font-size: 14px;
+  margin: 20px 0px;
+}
+
+/* ===================================================================================== GLOBE ============================================================== */
+
+.delivery-countries {
+  color: #fbc400;
+  position: relative;
+  background: #1d1f2c;
+}
+
+.globe-img {
+  position: relative;
+}
+
+.globe-img {
+  background-color: #1d1f2c;
+  width: 100%;
+  height: 600px;
+  /* filter: brightness(20%); */
+}
+
+.globe-bg {
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(29, 31, 44, 0.6);
+}
+
+.globe-content {
+  position: absolute;
+  width: 400px;
+  top: 50%;
+  right: 60%;
+  transform: translateY(-50%);
+  padding: 20px;
+  background-color: #1d1f2c;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.globe-content h1 {
+  text-align: center;
+
+  margin-bottom: 15px;
+}
+
+.globe-content-parag {
+  margin-bottom: 10px;
+  /* font-weight: 500; */
+  /* font-size: 30px; */
+  color: #fbc400;
+}
+
+.globe-countries {
+  color: #888;
+}
+
+.globe-content-nav ul {
+  list-style: none;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.globe-content-nav ul li {
+  margin: 5px;
+}
+
+.delivery-countries-flags {
+  position: relative;
+}
+.delivery-countries-flags div {
+  position: absolute;
+  transform: rotate(45deg);
+  border: 1px solid #fbc400;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-bottom-right-radius: 0%;
+  background-color: #1d1f2c;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  padding: 5px;
+}
+.delivery-countries-flags div img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+}
+
+.turkey-flag {
+  top: 150px;
+  left: 56%;
+}
+.russia-flag {
+  top: 70px;
+  left: 72%;
+}
+.italy-flag {
+  top: 120px;
+  left: 50%;
+}
+.polsa-flag {
+  top: 80px;
+  left: 55%;
+}
+
+/* ===================================================================================== TRUCK TYPES ============================================================== */
+
+.our-trucks {
+  background: #fbc400;
+  /* height: 300px; */
+  margin: 40px 0px;
+}
+
+.our-trucks-title {
+  margin: 25px;
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+.our-trucks-title h1 {
+  padding: 5px 25px;
+  background-color: #1d1f2c;
+  color: #fbc400;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.our-trucks-main-parag {
+  background-color: #1d1f2c;
+  color: #fbc400;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 800px;
+  font-size: 18px;
+}
+
+.our-trucks-main-parag span {
+  color: #ca9400;
+}
+
+.truck-types-boxs {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 40px;
+}
+
+.truck-types-box {
+  background-color: #1d1f2c;
+  padding: 15px;
+  border-radius: 10px;
+  color: #fbc400;
+  width: 380px;
+  text-align: center;
+}
+
+.truck-types-box h4 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.truck-type-img {
+  /* width: 300px; */
+  height: 300px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+.truck-type-img img {
+  border-radius: 10px;
+}
+
+/* ===================================================================================== FOOTER ============================================================== */
+
+footer {
+  padding: 60px 80px 10px;
+  background-color: #1d1f2c;
+  color: #fbc400;
+}
+
+footer .border {
+  border-bottom: 1px solid #fbc400;
+  width: 100%;
+  height: 1px;
+  margin-top: 16px;
+}
+
+.footer-contacts h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-contact-boxs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-contact-text span {
+  margin-left: 5px;
+  font-size: 14px;
+  color: #888;
+}
+
+.footer-contact-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-contact-content {
+  margin-left: 5px;
+  font-size: 14px;
+  color: #888;
+}
+
+.contact-socialmedia {
+  display: flex;
+  gap: 10px;
+  color: #888;
+}
+
+.upper-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+.copyright {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 19px;
+  margin: 20px;
+}
+
+@media screen and (max-width: 1250px) {
+  .hero-text p {
+    font-size: 40px;
+    font-weight: 600;
+    text-wrap: balance;
+  }
+
+  .cargo-expertise h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    word-spacing: 10px;
+    font-size: 25px;
+  }
+
+  iframe {
+    width: 400px;
+  }
+  footer {
+    padding: 60px 40px 10px;
+    background-color: #1d1f2c;
+    color: #fbc400;
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .globe-img {
+    background-color: #1d1f2c;
+    width: 100%;
+    height: 400px;
+    z-index: -3;
+  }
+  .globe-content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .delivery-countries-flags {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .hero-text p {
+    font-size: 30px;
+    font-weight: 600;
+    text-wrap: balance;
+  }
+
+  .truck-types-boxs {
+    gap: 20px;
+  }
+
+  .truck-types-box {
+    width: 350px;
+  }
+
+  /* -------------------------------------Expertise-------------------------------- */
+
+  .cargo-expertise {
+    padding: 70px 30px;
+    background-color: #1d1f2c;
+    color: #fbc400;
+  }
+  .cargo-expertise h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    word-spacing: 10px;
+    font-size: 30px;
+  }
+  .cargo-expertise-boxs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 100px);
+    place-items: center;
+    gap: 10px;
+    row-gap: 50px;
+  }
+  .cargo-expertise-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    width: 60%;
+    height: 150px;
+    border-radius: 15px;
+    transition: all 300ms linear;
+  }
+  .cargo-expertise-box i {
+    color: #fbc400;
+    font-size: 22px;
+  }
+
+  /* ------------------------------About us */
+
+  .why-choose-boxs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0px;
+  }
+
+  .why-choose-box {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .why-choose {
+    padding: 40px 60px;
+    background-color: #fbc400;
+  }
+
+  /* ------------------------------Globe */
+
+  .globe-content h1 {
+    margin-bottom: 40px;
+  }
+
+  /* ------------------------------------------------- Footer- */
+
+  .upper-footer {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 40px;
+  }
+  iframe {
+    width: 100%;
+  }
+  .footer-contacts h2 {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+
+  .footer-contact-content {
+    text-align: center;
+  }
+
+  .footer-contact-boxs {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .footer-contact-text {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  /* //////////////////////////////////////////////////////////////// HEADER */
+
+  .hamburger {
+    display: block;
+  }
+
+  .header-menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+    transition: all 0.7s ease;
+  }
+
+  .mobile-nav {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+  }
+
+  .mobile-back-div {
+    background-color: #1d1f2c;
+    position: absolute;
+    top: -10px;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+    clip-path: circle(30px at 100% -20%);
+    transition: all 400ms linear;
+  }
+
+  .mobile-back-div.active {
+    clip-path: circle(1000px at 100% 10%);
+    width: 1000px;
+    height: 1000px;
+  }
+
+  .mobile-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
+    font-size: 20px;
+  }
+
+  .mobile-nav-ul li {
+    opacity: 0;
+  }
+
+  .mobile-nav ul li:nth-child(1) {
+    transition: all 500ms ease 0.4s;
+  }
+  .mobile-nav ul li:nth-child(2) {
+    transition: all 500ms ease 0.5s;
+  }
+  .mobile-nav ul li:nth-child(3) {
+    transition: all 500ms ease 0.6s;
+  }
+  .mobile-nav ul li:nth-child(4) {
+    transition: all 500ms ease 0.7s;
+  }
+
+  .mobile-nav ul li.fade {
+    opacity: 1;
+  }
+
+  /* //////////////////////  HERO */
+
+  .hero-img {
+    width: 100%;
+    height: 70vh;
+  }
+
+  .hero-bg {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 70vh;
+    position: absolute;
+    top: 0px;
+  }
+
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translateY(-100%);
+    color: #fbc400;
+    padding: 10px 20px 40px;
+    border-radius: 10px;
+    width: 40%;
+  }
+
+  .hero-text p {
+    font-size: 20px;
+    font-weight: 600;
+    text-wrap: balance;
+  }
+
+  /* //////////////////////////////////////////////////////////////// GLOBE */
+
+  .globe-content {
+    width: 90%;
+  }
+
+  .truck-types-boxs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 40px;
+  }
+
+  .truck-types-box {
+    max-width: 300px;
+  }
+
+  /* //////////////////////////////////////////////////////////////// EXPERTIES */
+
+  .cargo-expertise {
+    padding: 40px 10px;
+    background-color: #1d1f2c;
+    color: #fbc400;
+  }
+  .cargo-expertise h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    word-spacing: 10px;
+    font-size: 20px;
+  }
+
+  .cargo-expertise-box {
+    padding: 0px 20px;
+    width: 80%;
+  }
+  .cargo-expertise-boxs {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(2, 100px);
+    place-items: center;
+    gap: 0px;
+    row-gap: 50px;
+  }
+
+  .cargo-expertise-box i {
+    color: #fbc400;
+    font-size: 22px;
+  }
+
+  .cargo-expertise-box p {
+    text-align: center;
+    height: 20px;
+    font-size: 14px;
+  }
+
+  .cargo-expertise-box span {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    background-color: #1d1f2c;
+    padding: 10px;
+    border: 5px solid #888;
+    box-shadow: 0px 0px 0px 3px #fbc400;
+    transition: all 300ms linear;
+  }
+
+  /* .cargo-expertise-box:hover {
+    background-color: #fbc400;
+    color: #1d1f2c;
+    cursor: pointer;
+  }
+  .cargo-expertise-box:hover span {
+    box-shadow: 0px 0px 0px 3px #1d1f2c;
+  } */
+
+  /* /////////////////////////////////////////////////////////////////////////////ABOUT Us  */
+
+  .why-choose {
+    padding: 40px 40px;
+    background-color: #fbc400;
+  }
+
+  .why-choose-title {
+    color: #fbc400;
+    font-size: 18px;
+    position: absolute;
+    top: 0px;
+    left: 20%;
+  }
+
+  .truck-back {
+    background-color: #1d1f2c;
+    height: 37px;
+    width: 150px;
+    transform: translatex(6px);
+    position: relative;
+    /* margin-bottom: 20px; */
+  }
+
+  .wheel-front-middle {
+    transform: translate(48px, 29px);
+  }
+  .wheel-front {
+    transform: translate(82px, 29px);
+  }
+
+  .wheel-front-back {
+    transform: translate(127px, 29px);
+  }
+}
